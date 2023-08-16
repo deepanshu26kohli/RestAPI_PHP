@@ -9,7 +9,6 @@ $result = mysqli_query($conn,$sql) or die("SQL Query Failed");
 if(mysqli_num_rows($result)>0){
     $output['result'] = mysqli_fetch_all($result,MYSQLI_ASSOC);
     $output['total'] = mysqli_num_rows($result);
-    
     echo json_encode($output); 
 }
 else{
